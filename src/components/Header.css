@@ -1,0 +1,4 @@
+.app-header nav {
+  display: flex;
+  gap: .3rem;
+}

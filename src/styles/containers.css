@@ -1,0 +1,9 @@
+main {
+  padding: .5rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: .4rem;
+}

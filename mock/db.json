@@ -1,0 +1,23 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "John Due",
+      "email": "john.due@email.com",
+      "roles": [
+        "user"
+      ],
+      "createdAt": 14326323576
+    },
+    {
+      "id": 2,
+      "username": "Due John",
+      "email": "due.john@email.com",
+      "roles": [
+        "user"
+      ],
+      "createdAt": 14326345745
+    }
+  ],
+  "jwt-token": ["ad3400rwr0324032h0r"]
+}
