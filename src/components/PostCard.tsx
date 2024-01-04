@@ -5,6 +5,7 @@ import { UsersClient } from '../clients/users';
 import { PostDTO } from '../dtos/post';
 import { postAgeMessage } from '../utils/date';
 import './PostCard.css';
+import { CustomSkeleton } from './CustomSkeleton';
 
 export interface PostCardProps {
   post: PostDTO;
@@ -29,7 +30,15 @@ export function PostCard(props: PostCardProps) {
         <div className="row title-container">
           <h3>{post.title}</h3>
           <div className="info">
-            {user ? <small>Published by <em>{user.name}</em> {postAgeMessage.fromTodayDiff(post.publishedAt)}</small> : <small>...</small>}
+            <small className='publised-by'>
+              Published by <em>
+                {user ? (
+                  user.name
+                ) : (
+                  <CustomSkeleton width='4rem' />
+                )}
+              </em> {postAgeMessage.fromTodayDiff(post.publishedAt)}
+            </small>
             <span>
               {rating}
               <AiFillLike />
@@ -39,5 +48,29 @@ export function PostCard(props: PostCardProps) {
         <small>{`${post.content.slice(0, 64)}...`}</small>
       </span>
     </Link>
+  )
+}
+
+export function LoadingPostCard() {
+  return (
+    <span className="post-card __loading">
+      <div className="row title-container">
+        <h3 style={{ flex: 1.2 }}>
+          <CustomSkeleton />
+        </h3>
+        <div className="info">
+          <small className='publised-by'>
+            Published by
+            <CustomSkeleton width='4rem' />
+            {postAgeMessage(1)}
+          </small>
+          <span>
+            <CustomSkeleton width='1rem' />
+            <AiFillLike />
+          </span>
+        </div>
+      </div>
+      <small><CustomSkeleton /></small>
+    </span>
   )
 }

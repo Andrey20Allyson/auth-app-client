@@ -15,7 +15,10 @@
 }
 
 .app-header {
+  top: 0;
   display: flex;
   flex-direction: column;
   position: sticky;
+  box-shadow: -.2rem .5rem .4rem #0004;
+  z-index: 999;
 }

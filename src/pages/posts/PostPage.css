@@ -7,3 +7,7 @@
 .post-page h2 {
   text-align: center;
 }
+
+.post-page.error * {
+  text-align: center;
+} 

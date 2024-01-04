@@ -4,6 +4,8 @@ import { JWT_TOKEN_STORAGE_KEY } from "./auth";
 export type RequestInitWithoutMethod = Omit<RequestInit, 'method'>;
 export type PostRequestInit = Omit<RequestInitWithoutMethod, 'body'>;
 
+const sleep = (ms: number) => new Promise(res => setTimeout(res, ms));
+
 export class Client {
   baseHeaders: Headers = new Headers();
 
@@ -13,7 +15,7 @@ export class Client {
     this.baseHeaders.set('Content-Type', 'application/json');
   }
 
-  fetch(path: string, options: RequestInit = {}) {
+  async fetch(path: string, options: RequestInit = {}) {
     const url = new URL(path, this.baseUrl);
 
     const headers = new Headers(options?.headers);
@@ -25,6 +27,8 @@ export class Client {
     if (token !== null) {
       headers.set('Authorization', `Bearer ${token}`);
     }
+
+    await sleep(2000);
 
     return fetch(url, {
       ...options,

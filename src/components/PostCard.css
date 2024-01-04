@@ -21,14 +21,16 @@
   display: flex;
   gap: .5rem;
 
-  & small {
-    border-right: 1px solid #b9b9b9;
-    padding-right: .5rem;
-  }
-
   & span {
     display: flex;
     align-items: center;
     gap: .2rem;
   }
+}
+
+.post-card .publised-by {
+  border-right: 1px solid #b9b9b9;
+  padding-right: .5rem;
+  display: flex;
+  gap: .3rem;
 }

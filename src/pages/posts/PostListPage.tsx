@@ -1,7 +1,7 @@
 import { useQuery } from "react-query";
 import { PostsClient } from "../../clients/posts";
 import { Header } from "../../components/Header";
-import { PostCard } from "../../components/PostCard";
+import { LoadingPostCard, PostCard } from "../../components/PostCard";
 import './PostListPage.css';
 
 export function PostListPage() {
@@ -15,9 +15,13 @@ export function PostListPage() {
       <main className="post-list-page">
         <h2>Postagens</h2>
         <section>
-          {data && status !== 'error' &&
-            data.map(post => <PostCard post={post} />)}
-          {status === 'error' && <h3>Houve Um Erro</h3>}
+          {status === 'loading' ? (
+            new Array(4)
+              .fill(0)
+              .map((_, idx) => <LoadingPostCard key={idx} />)
+          ) : (
+            data!.map((post, idx) => <PostCard key={idx} post={post} />)
+          )}
         </section>
       </main>
     </>
