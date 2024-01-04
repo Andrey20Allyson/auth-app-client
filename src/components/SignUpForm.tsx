@@ -1,5 +1,6 @@
 import { Form, Formik, FormikErrors } from "formik";
 import { AuthField, AuthSubmitButton } from "./Auth";
+import { Link } from "react-router-dom";
 
 export interface SignUpFormData {
   login: string;
@@ -50,7 +51,12 @@ export function SignUpForm(props: SignUpFormProps) {
         <AuthField name="login" title="Login" />
         <AuthField name="password" title="Senha" />
         <AuthField name="birthDate" title="Data Nasc." type="date" />
-        <AuthSubmitButton title="Registrar" />
+        <section className="row">
+          <AuthSubmitButton title="Registrar" />
+          <Link to='/'>
+            <input type="button" value="Voltar" />
+          </Link>
+        </section>
       </Form>
     </Formik>
   )

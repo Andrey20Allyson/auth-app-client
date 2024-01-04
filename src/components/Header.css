@@ -1,4 +1,21 @@
 .app-header nav {
   display: flex;
   gap: .3rem;
+  background-color: #383838;
+  border-bottom: 1px solid #1b1b1b;
+  padding: .5rem;
+}
+
+.app-header h1 {
+  padding: .5rem;
+  background-color: #313131;
+  font-size: 1.7rem;
+  border-bottom: 1px solid #1b1b1b;
+  margin: 0;
+}
+
+.app-header {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
 }

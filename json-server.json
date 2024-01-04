@@ -1,5 +1,4 @@
 {
-  "routes": "mock/routes.json",
   "watch": true,
   "port": 8080
 }

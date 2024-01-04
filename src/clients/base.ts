@@ -1,12 +1,14 @@
+import { API_HOSTNAME } from "../variables";
 import { JWT_TOKEN_STORAGE_KEY } from "./auth";
 
 export type RequestInitWithoutMethod = Omit<RequestInit, 'method'>;
+export type PostRequestInit = Omit<RequestInitWithoutMethod, 'body'>;
 
 export class Client {
   baseHeaders: Headers = new Headers();
 
   constructor(
-    readonly baseUrl: string,
+    readonly baseUrl: string = API_HOSTNAME,
   ) {
     this.baseHeaders.set('Content-Type', 'application/json');
   }
@@ -30,19 +32,21 @@ export class Client {
     });
   }
 
-  get(url: string, options?: RequestInit) {
+  get(url: string, options?: RequestInitWithoutMethod) {
     return this.fetch(url, { ...options, method: 'GET' });
   }
   
-  post(url: string, options?: RequestInit) {
-    return this.fetch(url, { ...options, method: 'POST' });
+  post(url: string, data: object, options?: PostRequestInit) {
+    const body = JSON.stringify(data);
+
+    return this.fetch(url, { ...options, body, method: 'POST' });
   }
 
-  put(url: string, options?: RequestInit) {
+  put(url: string, options?: RequestInitWithoutMethod) {
     return this.fetch(url, { ...options, method: 'PUT' });
   }
 
-  delete(url: string, options?: RequestInit) {
+  delete(url: string, options?: RequestInitWithoutMethod) {
     return this.fetch(url, { ...options, method: 'DELETE' });
   }
 }

@@ -2,22 +2,61 @@
   "users": [
     {
       "id": 1,
-      "username": "John Due",
-      "email": "john.due@email.com",
-      "roles": [
-        "user"
-      ],
+      "name": "John Due",
+      "age": 32,
+      "birthDate": "1991-12-12",
       "createdAt": 14326323576
     },
     {
       "id": 2,
-      "username": "Due John",
-      "email": "due.john@email.com",
-      "roles": [
-        "user"
-      ],
+      "name": "Due John",
+      "age": 19,
+      "birthDate": "2004-04-12",
       "createdAt": 14326345745
     }
   ],
-  "jwt-token": ["ad3400rwr0324032h0r"]
+  "posts": [
+    {
+      "id": 1,
+      "title": "Post 1 Title",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptas tempore recusandae possimus iusto? Iure placeat, similique deserunt unde deleniti natus nihil expedita incidunt pariatur nostrum neque adipisci explicabo asperiores.",
+      "authorId": 1,
+      "publishedAt": "2023-12-20"
+    },
+    {
+      "id": 2,
+      "title": "Post 2 Title",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptas tempore recusandae possimus iusto? Iure placeat, similique deserunt unde deleniti natus nihil expedita incidunt pariatur nostrum neque adipisci explicabo asperiores.",
+      "authorId": 2,
+      "publishedAt": "2024-01-2"
+    },
+    {
+      "id": 3,
+      "title": "Post 3 Title",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptas tempore recusandae possimus iusto? Iure placeat, similique deserunt unde deleniti natus nihil expedita incidunt pariatur nostrum neque adipisci explicabo asperiores.",
+      "authorId": 1,
+      "publishedAt": "2023-03-20"
+    },
+    {
+      "id": 4,
+      "title": "Post 4 Title",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptas tempore recusandae possimus iusto? Iure placeat, similique deserunt unde deleniti natus nihil expedita incidunt pariatur nostrum neque adipisci explicabo asperiores.",
+      "authorId": 2,
+      "publishedAt": "2023-12-20"
+    }
+  ],
+  "post-votes": [
+    {
+      "id": 1,
+      "type": 2,
+      "ownerId": 1,
+      "postId": 3
+    },
+    {
+      "id": 2,
+      "type": 2,
+      "ownerId": 2,
+      "postId": 3
+    }
+  ]
 }

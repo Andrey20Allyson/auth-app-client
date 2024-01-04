@@ -1,0 +1,17 @@
+.post-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #4d4d4d;
+  color: white;
+  padding: .5rem 3rem;
+  border-radius: .5rem;
+  border: 1px solid #a1a1a1;
+  max-width: 800px;
+  min-width: 60vw;
+  width: max-content;
+}
+
+.post-card .title-container {
+  display: flex;
+  align-items: center;
+}

@@ -31,4 +31,4 @@ env.asNumber = function(name: string): number {
   return value;
 }
 
-export const AUTH_API_HOSTNAME = env('VITE_AUTH_HOST_NAME');
+export const API_HOSTNAME = env('VITE_API_HOST_NAME');

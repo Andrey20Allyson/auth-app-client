@@ -1,0 +1,10 @@
+.post-list-page h2 {
+  text-align: center;
+}
+
+.post-list-page section {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  align-items: center;
+}

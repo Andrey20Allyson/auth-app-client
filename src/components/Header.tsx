@@ -35,6 +35,11 @@ export function Header() {
             Registrar
           </button>
         </Link>
+        <Link to='/posts'>
+          <button>
+            Postagens
+          </button>
+        </Link>
       </nav>
     </header>
   );

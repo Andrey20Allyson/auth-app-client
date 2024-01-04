@@ -1,12 +1,12 @@
 import { ReactNode } from "react";
 import { useQuery } from "react-query";
-import { UserClient } from "../clients/users";
+import { UsersClient } from "../clients/users";
 import { UserCard } from "./UserCard";
 import './UserList.css';
 
 export function UserList() {
-  const userClient = new UserClient();
-  const response = useQuery('users', () => userClient.users());
+  const userClient = new UsersClient();
+  const response = useQuery('users', () => userClient.list());
 
   let userList: ReactNode;
 

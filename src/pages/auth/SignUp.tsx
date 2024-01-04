@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import { AuthClient } from "../clients/auth";
-import { SignUpForm, SignUpFormData } from "../components/SignUpForm";
-import { SignUpData } from "../dtos/sign-up";
+import { AuthClient } from "../../clients/auth";
+import { SignUpForm, SignUpFormData } from "../../components/SignUpForm";
+import { SignUpData } from "../../dtos/sign-up";
 
 export default function SignUp() {
   const authService = new AuthClient();

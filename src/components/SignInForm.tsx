@@ -39,6 +39,9 @@ export function SignInForm(props: SignInFormProps) {
           <Link to='/sign-up'>
             <input type="button" value="Registrar" />
           </Link>
+          <Link to='/'>
+            <input type="button" value="Voltar" />
+          </Link>
         </section>
       </Form>
     </Formik>
