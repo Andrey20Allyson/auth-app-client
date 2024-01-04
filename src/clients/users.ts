@@ -8,7 +8,7 @@ export class UsersClient extends Client {
     return resp.json() as Promise<UserDTO[]>;
   }
 
-  async find(id: number): Promise<UserDTO> {
+  async find(id: number | string): Promise<UserDTO> {
     const resp = await this.fetch(`/users/${id}`);
 
     return resp.json();

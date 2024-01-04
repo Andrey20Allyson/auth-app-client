@@ -12,8 +12,10 @@ export interface ListPostsOptions {
 }
 
 export class PostsClient extends Client {
-  async find(id: number): Promise<PostDTO> {
+  async find(id: number | string): Promise<PostDTO> {
     const res = await this.get(`/posts/${id}`);
+
+    if (res.ok === false) return Promise.reject(res.status);
 
     return res.json();
   }

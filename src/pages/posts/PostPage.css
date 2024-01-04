@@ -1,0 +1,9 @@
+.post-page {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10rem;
+}
+
+.post-page h2 {
+  text-align: center;
+}
