@@ -6,6 +6,7 @@ import { Header } from "../../components/Header";
 import { PostDTO } from "../../dtos/post";
 import './PostCard.css';
 import './PostListPage.css';
+import { AiFillLike } from 'react-icons/ai';
 import { postAgeMessage } from "../../utils/date";
 
 export function PostListPage() {
@@ -43,12 +44,20 @@ export function PostCard(props: PostCardProps) {
     config => usersClient.find(config.queryKey[1])
   );
   
+  const rating = 10;
+
   return (
     <Link to={`/posts/${post.id}`}>
       <span className="post-card">
         <div className="row title-container">
           <h3>{post.title}</h3>
-          { user ? <small>Published by <em>{user.name}</em> {postAgeMessage.fromTodayDiff(post.publishedAt)}</small> : <small>...</small> }
+          <div className="info">
+            {user ? <small>Published by <em>{user.name}</em> {postAgeMessage.fromTodayDiff(post.publishedAt)}</small> : <small>...</small>}
+            <span>
+              {rating}
+              <AiFillLike />
+            </span>
+          </div>
         </div>
         <small>{`${post.content.slice(0, 64)}...`}</small>
       </span>

@@ -43,6 +43,34 @@
       "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptas tempore recusandae possimus iusto? Iure placeat, similique deserunt unde deleniti natus nihil expedita incidunt pariatur nostrum neque adipisci explicabo asperiores.",
       "authorId": 2,
       "publishedAt": "2023-12-20"
+    },
+    {
+      "id": 5,
+      "title": "Post 5 Title",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptas tempore recusandae possimus iusto? Iure placeat, similique deserunt unde deleniti natus nihil expedita incidunt pariatur nostrum neque adipisci explicabo asperiores.",
+      "authorId": 1,
+      "publishedAt": "2023-12-20"
+    },
+    {
+      "id": 6,
+      "title": "Post 6 Title",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptas tempore recusandae possimus iusto? Iure placeat, similique deserunt unde deleniti natus nihil expedita incidunt pariatur nostrum neque adipisci explicabo asperiores.",
+      "authorId": 2,
+      "publishedAt": "2024-01-2"
+    },
+    {
+      "id": 7,
+      "title": "Post 7 Title",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptas tempore recusandae possimus iusto? Iure placeat, similique deserunt unde deleniti natus nihil expedita incidunt pariatur nostrum neque adipisci explicabo asperiores.",
+      "authorId": 1,
+      "publishedAt": "2023-03-20"
+    },
+    {
+      "id": 8,
+      "title": "Post 8 Title",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptas tempore recusandae possimus iusto? Iure placeat, similique deserunt unde deleniti natus nihil expedita incidunt pariatur nostrum neque adipisci explicabo asperiores.",
+      "authorId": 2,
+      "publishedAt": "2023-12-20"
     }
   ],
   "post-votes": [
